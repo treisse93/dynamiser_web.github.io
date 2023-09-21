@@ -32,6 +32,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 32px 17px 0 17px;
+  h1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+  }
 }
 .main__img {
   height: 275px;
@@ -49,11 +54,20 @@
     text-transform: uppercase;
   }
 }
+@keyframes entrees {
+  0% {
+    translate: -9999px;
+  }
+  100% {
+    translate: 0;
+  }
+}
 .entrees {
   padding: 0 13px 0 13px;
   display: flex;
   gap: 12px;
   flex-direction: column;
+
   animation: entrees 1s 0.2s forwards;
   h2 {
     font-family: Roboto;
@@ -61,14 +75,6 @@
     font-weight: 300;
     text-transform: uppercase;
   }
-}
-.entrees:after {
-  padding: 0 13px 0 13px;
-  display: flex;
-  gap: 12px;
-  flex-direction: column;
-  transform: scaleX(1);
-  animation: entrees 1s 1s forwards;
 }
 
 .plats {
@@ -132,6 +138,9 @@
       font-weight: 300;
       justify-content: space-between;
       position: relative;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       & p {
         white-space: nowrap;
         overflow: hidden;

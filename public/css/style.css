@@ -63,17 +63,15 @@ h6 {
   position: relative;
   display: flex;
   padding-right: 33px;
-  padding-top: 23px;
-  flex-direction: column;
-  animation: hearth-visible 3s forwards;
+  padding-top: 5px;
 }
 .hearth .fa-solid {
-  display: none;
   background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  opacity: 0;
+  transform: scale(0);
+  transition: transform 330ms ease-in-out;
 }
 .hearth .fa-regular {
   color: black;
@@ -87,16 +85,22 @@ h6 {
     opacity: 1;
   }
 }
-.hearth:hover {
-  opacity: 1;
-  /* A faire disparaitre et apparaitre prog.*/
+@keyframes hearth-close {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
 }
 .hearth:hover .fa-regular {
   display: none;
+  opacity: 0;
 }
 .hearth:hover .fa-solid {
   display: block;
-  animation: hearth-visible 3s forwards;
+  opacity: 1;
+  transform: scale(1);
 }
 
 @media (min-width: 1024px) {
@@ -582,6 +586,11 @@ footer i {
   text-overflow: ellipsis;
   padding: 32px 17px 0 17px;
 }
+.title__hearth h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: wrap;
+}
 
 .main__img {
   height: 275px;
@@ -601,6 +610,14 @@ footer i {
   text-transform: uppercase;
 }
 
+@keyframes entrees {
+  0% {
+    translate: -9999px;
+  }
+  100% {
+    translate: 0;
+  }
+}
 .entrees {
   padding: 0 13px 0 13px;
   display: flex;
@@ -613,15 +630,6 @@ footer i {
   font-size: 16px;
   font-weight: 300;
   text-transform: uppercase;
-}
-
-.entrees:after {
-  padding: 0 13px 0 13px;
-  display: flex;
-  gap: 12px;
-  flex-direction: column;
-  transform: scaleX(1);
-  animation: entrees 1s 1s forwards;
 }
 
 .plats {
@@ -687,6 +695,9 @@ footer i {
   font-weight: 300;
   justify-content: space-between;
   position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .card__content__subtitle p {
   white-space: nowrap;

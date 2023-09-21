@@ -29,16 +29,15 @@
   position: relative;
   display: flex;
   padding-right: 33px;
-  padding-top: 23px;
-  flex-direction: column;
-  animation: hearth-visible 3s forwards;
+  padding-top: 5px;
+
   .fa-solid {
-    display: none;
     background: $buttonGradient;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    opacity: 0;
+    transform: scale(0);
+    transition: transform 330ms ease-in-out;
   }
   .fa-regular {
     color: black;
@@ -52,16 +51,24 @@
     opacity: 1;
   }
 }
+@keyframes hearth-close {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
 .hearth:hover {
-  opacity: 1;
   .fa-regular {
     display: none;
+    opacity: 0;
   }
   .fa-solid {
     display: block;
-    animation: hearth-visible 3s forwards;
+    opacity: 1;
+    transform: scale(1);
   }
-  /* A faire disparaitre et apparaitre prog.*/
 }
 
 @media (min-width: 1024px) {
