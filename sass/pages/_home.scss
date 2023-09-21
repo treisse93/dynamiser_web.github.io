@@ -1,0 +1,345 @@
+.appbar {
+  display: flex;
+  height: 63px;
+  padding: 14px 89px 13px 89px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  /* Shadow/Badge */
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.location {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding-bottom: 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  white-space: nowrap;
+  background: $secondBackground;
+  i {
+    width: 12px;
+    height: 16px;
+    color: $icon;
+  }
+}
+.text-search {
+  background-color: $secondBackground;
+  border: 1px solid $secondBackground;
+  text-align: left;
+  outline: none;
+  width: 85%;
+}
+
+.reservation {
+  background: $primaryBackground;
+  & h1 {
+    overflow: hidden;
+    text-align: center;
+    margin-top: 39px;
+    margin-left: 11%;
+    margin-right: 15.5%;
+    padding: 0px 24px 24px 24px;
+
+    /* Section Title */
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  & p {
+    width: 84%;
+    text-align: center;
+    margin: auto;
+    color: $icon;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* Paragraph */
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 20px 68px 20px;
+  /* Section Title */
+  font-family: Roboto;
+  h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__btn {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 25px;
+    &__number {
+      width: 100%;
+      margin: auto;
+    }
+  }
+}
+
+.circle-number {
+  display: flex;
+  flex-direction: row;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: -9px;
+  border-radius: 12px;
+  background-color: $colorPrimary;
+}
+
+.btn-menu {
+  width: 100%;
+  height: 72.379px;
+  border-radius: 20px;
+  background: $primaryBackground;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  /* Shadow/Instructions */
+  border-width: 0;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  &__icon {
+    display: flex;
+    margin-left: 34.71px;
+    margin-right: 27px;
+    position: relative;
+  }
+}
+.restaurants {
+  display: flex;
+  padding: 54px 20px 66px 20px;
+  flex-direction: column;
+  gap: 18px;
+  background-color: $primaryBackground;
+
+  h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  a {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .cards {
+    width: 100%;
+    height: 251px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    &__new {
+      display: flex;
+      flex-direction: row-reverse;
+
+      &__text {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        border-radius: 2px;
+        background: var(--Green, #99e2d0);
+
+        /* Shadow/Badge */
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        color: var(--Green-Font, #008766);
+        text-align: center;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        width: 80px;
+        height: 29px;
+        margin: 13px 12px 0 0;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      &__titre {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &__title {
+          color: #000;
+          font-family: Roboto;
+          font-size: 18px;
+          font-weight: 700;
+        }
+        padding: 16px 0px 12px 13px;
+        &__subtitle {
+          color: #000;
+          font-family: Roboto;
+          font-size: 17px;
+          font-weight: 300;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+    img {
+      border-radius: 15px 15px 0px 0px;
+      width: 100%;
+      height: 175px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &__line1 {
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 18px;
+  }
+  &__line2 {
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .fonctionnement__btn {
+    flex-direction: row;
+  }
+  .reservation h1 {
+    margin: auto;
+    margin-top: 39px;
+  }
+  .restaurants {
+    &__line1 {
+      max-width: 1080px;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: flex-start;
+      gap: 100px;
+      align-self: stretch;
+    }
+    &__line2 {
+      max-width: 1080px;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: flex-start;
+      gap: 100px;
+      align-self: stretch;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .reservation {
+    & h1 {
+      margin-top: 30px;
+    }
+    & p {
+      margin-top: 18px;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .fonctionnement {
+    padding: 50px 180px;
+    gap: 25px;
+    &__btn {
+      flex-direction: row;
+      gap: 24px;
+      &__number {
+        width: 322px;
+        height: 72.379px;
+      }
+      .btn-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &__icon {
+          justify-content: center;
+        }
+      }
+
+      & p {
+        position: absolute;
+      }
+    }
+  }
+
+  .btn-menu__icon {
+    width: 13.037px;
+    height: 20px;
+    position: inherit;
+  }
+
+  .restaurants {
+    padding: 30px 180px 30px 180px;
+    align-items: flex-start;
+    gap: 28px;
+    & a {
+      width: 46.17%;
+    }
+    &__line1 {
+      flex-direction: row;
+      gap: 100px;
+    }
+    &__line2 {
+      flex-direction: row;
+      gap: 100px;
+    }
+    & .cards__content {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .main {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  body {
+    margin: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .appbar {
+    padding: 0;
+  }
+  .logo-header img {
+    width: 100px;
+  }
+}

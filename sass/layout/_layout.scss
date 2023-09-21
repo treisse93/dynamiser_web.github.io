@@ -1,0 +1,108 @@
+body {
+  width: 100%;
+}
+.fa-arrow-left {
+  color: #101010;
+}
+.logo-header {
+  display: flex;
+  width: 197px;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 162px;
+    display: flex;
+    height: 36px;
+    padding: 0px 19px 0px 16px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+footer {
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  gap: 16px;
+  background-color: $icon;
+  i {
+    color: #ffffff;
+  }
+}
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  color: $textBtn;
+  padding: 22px 25px;
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.footer {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 7px;
+  &__food {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+  }
+  &__partnair {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+  }
+  &__contact {
+    width: 130px;
+    & a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .appbar {
+    overflow: hidden;
+    padding: 30px 0px 31.798px 0px;
+  }
+  footer {
+    display: flex;
+    height: 114px;
+    padding: 30px 25px;
+    align-items: flex-end;
+    gap: 16px;
+    flex-direction: row-reverse;
+  }
+  .footer {
+    flex-direction: row;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    &__food {
+      width: 190px;
+    }
+    &__partnair {
+      width: 190px;
+    }
+    &__mention {
+      width: 130px;
+    }
+  }
+  .footer-logo {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+@media (max-width: 500px) {
+  .logo-header {
+    width: 80%;
+  }
+}
