@@ -126,3 +126,9 @@
     visibility: hidden;
   }
 }
+
+@media (min-width: 1440px) {
+  .lds-default {
+    max-width: 1440px;
+  }
+}

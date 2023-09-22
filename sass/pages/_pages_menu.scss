@@ -113,6 +113,16 @@
   background: var(--White, #fff);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 
+  &__content:hover {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    & p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
   &__content {
     width: 100%;
     overflow: hidden;
@@ -122,10 +132,7 @@
     }
     &__title {
       display: flex;
-      overflow: hidden;
       color: #000;
-      text-overflow: ellipsis;
-      white-space: nowrap;
       font-family: Roboto;
       font-size: 18px;
       font-weight: 500;
@@ -138,12 +145,6 @@
       font-weight: 300;
       justify-content: space-between;
       position: relative;
-      white-space: nowrap;
-      & p {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
       & span {
         display: flex;
         font-weight: 700;

@@ -669,6 +669,16 @@ footer i {
   background: var(--White, #fff);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
+.card__content:hover {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card__content:hover p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .card__content {
   width: 100%;
   overflow: hidden;
@@ -679,10 +689,7 @@ footer i {
 }
 .card__content__title {
   display: flex;
-  overflow: hidden;
   color: #000;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   font-family: Roboto;
   font-size: 18px;
   font-weight: 500;
@@ -695,12 +702,6 @@ footer i {
   font-weight: 300;
   justify-content: space-between;
   position: relative;
-  white-space: nowrap;
-}
-.card__content__subtitle p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .card__content__subtitle span {
   display: flex;
@@ -965,6 +966,11 @@ footer i {
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+@media (min-width: 1440px) {
+  .lds-default {
+    max-width: 1440px;
   }
 }
 
